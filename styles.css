@@ -1,0 +1,241 @@
+body { 
+    font-family: 'Arial Rounded MT Bold', 'Trebuchet MS', Verdana, sans-serif; 
+    /* Локальные шрифты */ 
+    margin: 0; 
+    padding: 0; 
+    background-color: #121212;
+    color: #e0e0e0; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+} 
+header, footer { 
+    background-color: #1f1f1f; 
+    /* Тёмный цвет для шапки и подвала */ 
+    color: #e0e0e0; 
+    text-align: center; 
+    padding: 1em; } 
+    /* Основное содержимое */ 
+    main { display: center; 
+        /* Используем flexbox для расположения боковой панели и товаров */ 
+        flex: 1; 
+        /* Чтобы занять оставшееся пространство */ 
+    } 
+    .logo img { max-height: 150px; } 
+    /* Стили для секции продуктов */ 
+main { padding: 20px; } 
+.products { 
+    margin-bottom: 20px; 
+
+} 
+.product-grid { 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 10px; 
+    } 
+.product { 
+        border: 1px solid #ccc; 
+        padding: 10px; 
+        width: 18%; 
+        background-color: #1e1e1e; 
+        /* Темный фон для продукта */ 
+        border-radius: 8px; 
+        /* Скругленные углы */ 
+        transition: transform 0.2s; 
+        /* Анимация при наведении */ } 
+.product img { max-width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+        } 
+.product h3 { 
+            font-size: 1.2em; 
+            margin: 10px 0; 
+        } 
+.product p { 
+            font-size: 0.9em; 
+            color: #888; 
+        } 
+.product:hover 
+{ transform: scale(1.05);
+/* Увеличение при наведении */
+}
+/* Навигационные кнопки и поле поиска */ 
+nav input[type="text"] 
+{ padding: 0.5em; 
+margin: 0.5em; 
+background-color: #333; 
+/* Тёмный фон для полей ввода */ 
+border: 1px solid #555; 
+color: #e0e0e0; } 
+nav button { margin: 0.5em; 
+    padding: 0.5em 1em;
+    background-color: #444; 
+    /* Тёмная кнопка */ 
+    color: #e0e0e0; 
+    border: 1px solid #555; 
+    cursor: pointer; 
+} 
+nav button:hover { 
+    background-color: #555;
+     /* Светлее при наведении */ 
+    } 
+    /* Оформление для формы входа и регистрации */ 
+    .form { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+        max-width: 300px; 
+        margin: auto; 
+        padding: 20px; 
+        background-color: #1e1e1e; 
+        border: 1px solid #333; 
+        border-radius: 8px; 
+    } 
+    .form label { 
+        align-self: flex-start; 
+        color: #e0e0e0; 
+    }
+    .form input[type="text"], 
+    .form input[type="password"] { 
+        padding: 10px; 
+        width: 100%; 
+        background-color: #333; 
+        border: 1px solid #555; 
+        color: #e0e0e0; 
+        border-radius: 4px; 
+    } 
+    .form button { 
+        margin-top: 10px; 
+        padding: 10px 20px; 
+        background-color: #444; 
+        color: #e0e0e0; 
+        border: none; 
+        cursor: pointer; 
+        border-radius: 4px;
+     } 
+     .form button:hover { 
+        background-color: #555; 
+    }
+     /* Стили для кнопок авторизации */ 
+     .auth-buttons { 
+        display: left; 
+        /* Используем flexbox для кнопок */ 
+        flex-direction: column; 
+        /* Кнопки в колонку */
+         gap: 10px; 
+         /* Отступ между кнопками */ 
+         margin: 20px 0; 
+         /* Отступ сверху и снизу */ 
+        } 
+/* Стили для кнопок входа и регистрации */ 
+.auth-buttons button {
+padding: 10px 20px; 
+background-color: #444; 
+/* Цвет кнопки */ 
+color: #e0e0e0;
+/* Цвет текста */ 
+border: 1px solid #555; 
+/* Цвет границы */ 
+border-radius: 4px; 
+/* Скругление углов */ cursor: pointer;
+/* Курсор при наведении */ } 
+.auth-buttons button:hover { 
+background-color: #555;
+/* Цвет кнопки при наведении */ 
+} footer p, footer a { 
+color: #888; 
+/* Светлый цвет для текста и ссылок в подвале */ 
+}
+footer a { text-decoration: none; } 
+footer a:hover { color: #e0e0e0; text-decoration: underline; } 
+footer { background-color: #1f1f1f;
+padding: 20px; 
+color: #e0e0e0; 
+text-align: center;
+margin-top: auto; } 
+.contacts { max-width: 500px; 
+margin: auto; 
+padding: 10px; 
+} 
+.contacts p { 
+margin: 5px 0; 
+color: #888; 
+} 
+.contacts h2 { color: #e0e0e0; 
+font-size: 1.2em; 
+margin-bottom: 10px; 
+} 
+nav ul { 
+list-style-type: none; 
+padding: 0; 
+margin: 0; 
+display: flex;
+justify-content: center; 
+}
+nav ul li { margin: 0 10px; } 
+nav ul li a { color: white; 
+text-decoration: none; 
+} 
+/* Стили для кнопки корзины */ 
+.cart-button { 
+position: fixed; 
+top: 20px; right: 20px; 
+width: 50px; height: 50px; 
+background-color: #f39c12; 
+color: white; 
+border: none; 
+border-radius: 50%; 
+font-size: 24px; 
+cursor: pointer; 
+display: flex; 
+align-items: center; 
+justify-content: center;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+}
+/* Сайдбар корзины */ 
+.cart-sidebar { 
+position: fixed; 
+top: 0;
+right: -400px; 
+width: 300px;
+height: 50%;
+background-color: #1e1e1e;
+/* Темный фон для корзины */ 
+box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); 
+padding: 20px; 
+transition: right 0.3s ease; 
+overflow-y: auto;
+    z-index: 1000; 
+    color: #e0e0e0; 
+}
+    .cart-sidebar.open { right: 0; } 
+    /* Кнопка Закрыть в корзине */ 
+    #closeCartButton { 
+    background-color: #e74c3c; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+margin-top: 20px; 
+border-radius: 4px; 
+} 
+.profile-button { 
+padding: 10px 20px;
+background-color: #444;
+/* Цвет кнопки */
+color: #e0e0e0; 
+/* Цвет текста */ 
+border: 1px solid #555; 
+/* Цвет границы */ 
+border-radius: 4px; 
+/* Скругление углов */
+cursor: pointer; 
+/* Курсор при наведении */
+margin-left: 10px;
+/* Отступ слева */ 
+} 
+.profile-button:hover { 
+background-color: #555; 
+/* Цвет кнопки при наведении */ 
+}
